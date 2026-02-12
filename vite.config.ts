@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/',
   build: {
     outDir: 'dist',
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
       input: './index.html'
     }
