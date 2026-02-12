@@ -6,9 +6,15 @@ export default defineConfig({
   base: '/',
   build: {
     outDir: 'dist',
-    chunkSizeWarningLimit: 2000,
+    chunkSizeWarningLimit: 1500,
     rollupOptions: {
-      input: './index.html'
+      input: './index.html',
+      output: {
+        manualChunks: {
+          'vendor-xlsx': ['xlsx'],
+          'vendor-react': ['react', 'react-dom'],
+        }
+      }
     }
   },
   server: {
